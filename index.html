@@ -1,0 +1,255 @@
+<div class="decimaux">
+  <style>
+    .decimaux {
+      font-family: 'Segoe UI', sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      line-height: 1.6;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    .decimaux h1, .decimaux h2, .decimaux h3 {
+      color: #005577;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.3em;
+    }
+    .decimaux p {
+      margin: 1rem 0;
+    }
+    .decimaux .exemple {
+      background: #eef6fb;
+      border-left: 4px solid #0099cc;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+    }
+    .decimaux .important {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+    }
+    .decimaux ul {
+      margin-left: 2rem;
+    }
+    .decimaux img {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .decimaux .operation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem 0;
+    }
+    .decimaux .operation pre {
+      font-family: 'Courier New', monospace;
+      font-size: 1.3rem;
+      background: none;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      line-height: 1.2;
+      margin: 0;
+      text-align: right;
+      white-space: pre;
+    }
+    .decimaux .trait-operation {
+      width: 6em;
+      border-top: 2px solid #333;
+      margin: 0.05rem auto;
+    }
+  </style>
+
+  <h1>Nombres décimaux et opérations</h1>
+  <h2>I. Les entiers naturels ne suffisent pas !</h2> 
+  <img src="https://site2wouf.fr/Pictures/10000001000003840000009D37C3E575.png" alt="Zoom entre 7 et 8">
+
+  <p>Sur une demi-droite graduée, le point M a pour abscisse 7. Chaque point peut être repéré par son abscisse. Mais que se passe-t-il pour le point N suivant ?</p>
+  <img src="https://site2wouf.fr/Pictures/10000001000003840000009C52A08933.png" alt="N">
+  <p>Ce point a une abscisse non entière, comprise entre 7 et 8. Zoomons !</p>
+   <img src="https://site2wouf.fr/Pictures/10000001000001050000018D9A95A43E.png" alt="sherlock">
+    <img src="https://site2wouf.fr/Pictures/10000001000003840000009CCA5364AC.png" alt="Droite graduée avec point M">
+    <p>On place les graduations entre 7 et 8 : de 7,1 à 7,9. Mais l'abscisse de N ne correspond toujours pas à une graduation... Zoomons encore entre 7,3 et 7,4.</p>
+  <img src="https://site2wouf.fr/Pictures/10000001000001050000018D9A95A43E.png" alt="sherlock">
+ 
+ <img src="https://site2wouf.fr/Pictures/10000001000003840000009C151F0FA0.png" alt="Droite graduée avec point M">
+  
+
+
+  
+
+  
+  
+
+  <p>On trouve que l'abscisse de N est comprise entre 7,35 et 7,36. On pourrait continuer ainsi indéfiniment...</p>
+
+  <h3>Un peu d'histoire</h3>
+  <p>Il y a plus de 3000 ans, on utilisait uniquement les entiers pour compter. Un jour, pour mesurer une ficelle, un homme la compare à un bâton : elle mesure plus de 11 bâtons mais moins de 12. Il divise alors son bâton en 10 parties égales, et affirme : <em>"Ma ficelle mesure 11 bâtons et 4 dixièmes"</em>.</p>
+
+
+  <p>Mais ce n'est qu'au XVIIe siècle que l'écossais John Napier introduit l'usage de la virgule pour séparer les unités des dixièmes.</p>
+  <p class="important">Nous verrons plus tard que même les décimaux ne suffisent pas toujours à repérer tous les points sur une droite !</p>
+
+  <h2>II. Nom des chiffres dans l'écriture décimale</h2>
+  <p>Dans le nombre 12 345,6789 :</p>
+  <ul>
+    <li>la partie entière est 12 345</li>
+    <li>la partie décimale est 6789</li>
+  </ul>
+  <p>Un nombre entier est donc un décimal particulier dont la partie décimale est nulle.</p>
+
+  <h3>A. À connaître</h3>
+  <p>Dans la partie décimale, les chiffres sont appelés (dans l'ordre) :</p>
+  <ul>
+    <li>dixièmes</li>
+    <li>centièmes</li>
+    <li>millièmes</li>
+    <li>dix-millièmes</li>
+    <li>etc.</li>
+  </ul>
+
+  <h3>B. Zéros inutiles</h3>
+  <p>Les zéros à gauche de la partie entière ou à droite de la partie décimale sont inutiles. Par exemple : <code>07,10&nbsp;&euro;</code> peut s'écrire <code>7,1&nbsp;&euro;</code>.</p>
+
+  <h2>III. Comparer des décimaux</h2>
+  <h3>A. Méthode</h3>
+  <p>On compare les parties entières. En cas d'égalité :</p>
+  <ul>
+    <li>on compare les dixièmes</li>
+    <li>puis les centièmes</li>
+    <li>puis les millièmes</li>
+    <li>etc.</li>
+  </ul>
+
+  <h3>B. Exemple</h3>
+  <div class="exemple">
+    <p>Comparer 9,3 et 9,25 :</p>
+    <p>Les parties entières sont égales, mais 3&nbsp;>&nbsp;2, donc <strong>9,3&nbsp;&gt;&nbsp;9,25</strong></p>
+  </div>
+
+  <h3>C. Rangement</h3>
+  <p>On peut ranger les décimaux par ordre croissant ou décroissant.</p>
+
+  <h3>D. Encadrement à l'unité</h3>
+  <p>Exemples :</p>
+  <ul>
+    <li>1&nbsp;&lt;&nbsp;1,936&nbsp;&lt;&nbsp;2</li>
+    <li>5&nbsp;&lt;&nbsp;5,5&nbsp;&lt;&nbsp;6</li>
+  </ul>
+
+  <h3>E. Arrondir</h3>
+  <p>On regarde le chiffre des dixièmes :</p>
+  <ul>
+    <li>0 à 4 → arrondi par défaut</li>
+    <li>5 à 9 → arrondi par excès</li>
+  </ul>
+
+  <h2>IV. Additions et soustractions</h2>
+  <ul>
+    <li>On aligne les virgules</li>
+    <li>On ajoute des zéros si besoin</li>
+    <li>On effectue l'opération comme pour les entiers</li>
+    <li>On place la virgule sous les autres</li>
+    <li>On vérifie la cohérence du résultat</li>
+  </ul>
+
+  <h3>Exemple : 3,14 + 87,2</h3>
+  <p>1. On aligne les virgules</p>
+<div class="operation">
+  <pre>
+   3,14
++ 87,2&nbsp;
+  </pre>
+</div>
+
+  <p>2. On complète (éventuellement) avec des zéros inutiles</p>
+  <div class="operation">
+  <pre>
+   3,14
++ 87,20
+  </pre>
+ 
+</div>
+
+  <p>3. On effectue l’addition et on place la virgule au bon endroit</p>
+  <div class="operation">
+    <pre>
+  3,14
++87,20</pre>
+ <div class="trait-operation"></div>
+  <pre>
+ 90,34
+  </pre>
+ 
+  </div>
+
+
+  <h2>V. Multiplication des décimaux</h2>
+<ol>
+  <li>On ignore les virgules</li>
+  <li>On effectue le produit comme pour des entiers</li>
+  <li>On compte les chiffres après la virgule</li>
+  <li>On place la virgule dans le résultat final</li>
+  <li>On enlève éventuellement les zéros inutiles</li>
+  <li>On vérifie la cohérence du résultat</li>
+</ol>
+<h3>Exemple : 2,18 &times; 5,5</h3>
+<p>1. On ignore les virgules</p>
+<div class="operation">
+  <pre>
+   2,18
+×   5,5<div class="trait-operation"></div>
+  <pre>
+  </pre>
+ 
+  </div>
+  
+<p>2. On effectue le produit comme pour des entiers  
+<div class="operation">
+  <pre>
+   2,18
+×   5,5</pre><div class="trait-operation"></div>
+<pre>   1090
+ 10900</pre>
+  </pre><div class="trait-operation"></div><pre>
+  11990</pre>
+  </div>
+
+<p>3. On compte les chiffres après la virgule dans les deux facteurs : 2 chiffres pour 2,18 et 1 chiffre pour 5,5 → au total 3 chiffres.</p>
+<p>4. On place la virgule au bon endroit</p>
+<div class="operation">
+  <pre>
+   2,18
+×   5,5</pre><div class="trait-operation"></div>
+<pre>   1090
+ 10900</pre>
+  </pre><div class="trait-operation"></div><pre>
+  11,990</pre>
+  </div>
+
+
+
+
+<p>4. On enlève le zéro inutile</p>
+<div class="operation">
+  <pre>
+   2,18
+×   5,5</pre><div class="trait-operation"></div>
+<pre>   1090
+ 10900</pre>
+  </pre><div class="trait-operation"></div><pre>
+  11,99 </pre>
+  </div>
+
+
+
+
+<p>5. On vérifie la cohérence (ordre de grandeur) 2 × 6 = 12 → C'est cohérent.</p>
+
+
+  <p class="important">Officiel : la compréhension des nombres décimaux s'appuie sur des activités concrètes et des situations de calculs régulières tout au long du cycle 3.</p>
+</div>
